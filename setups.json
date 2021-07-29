@@ -1,4 +1,4 @@
-a = {
+{
 	global: {
 		season: 2,
 		norm_das: 10000000,
