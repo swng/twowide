@@ -49,7 +49,11 @@ const wallkicks = {
   "2-3": [[0, 0], [1, 0], [1, 1], [0, -2], [1, -2]], //special
   "3-2": [[0, 0], [-1, 0], [-1, -1], [0, 2], [-1, 2]],
   "3-0": [[0, 0], [-1, 0], [-1, -1], [0, 2], [-1, 2]],
-  "0-3": [[0, 0], [1, 0], [1, 1], [0, -2], [1, -2]]
+  "0-3": [[0, 0], [1, 0], [1, 1], [0, -2], [1, -2]],
+  "0-2": [[0, 0]],
+  "1-3": [[0, 0]],
+  "2-0": [[0, 0]],
+  "3-1": [[0, 0]],
 };
 
 const i_wallkicks = {
@@ -60,7 +64,11 @@ const i_wallkicks = {
   "2-3": [[0, 0], [2, 0], [-1, 0], [2, 1], [-1, -2]],
   "3-2": [[0, 0], [-2, 0], [1, 0], [-2, -1], [1, 2]],
   "3-0": [[0, 0], [1, 0], [-2, 0], [1, -2], [-2, 1]],
-  "0-3": [[0, 0], [-1, 0], [2, 0], [-1, 2], [2, -1]]
+  "0-3": [[0, 0], [-1, 0], [2, 0], [-1, 2], [2, -1]],
+  "0-2": [[0, 0]],
+  "1-3": [[0, 0]],
+  "2-0": [[0, 0]],
+  "3-1": [[0, 0]],
 };
 
 const empty_line = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -871,8 +879,15 @@ window.addEventListener('load', function () {
         console.log(rotation);
       }
       function rotate_180() {
-        rotate_right();
-        rotate_right();
+        old_rotation = rotation;
+        rotation = (rotation + 2) % 4;
+        pieceMatrix = JSON.parse(JSON.stringify(piece_matrix[piece]));
+        for (var j = 0; j < rotation; j++) {
+          rotate(pieceMatrix);
+        }
+        if (!tryWallkick(old_rotation, rotation)) {
+          rotation = old_rotation;
+        }
       }
       function harddrop() {
         let dropY = y;
