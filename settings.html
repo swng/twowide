@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<title>Settings</title>
+<link rel="stylesheet" href="./styling.css">
+<link rel="icon" href="./2w.png">
+</head>
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<div id="header">
+    <a href="leaderboard" class="headers">
+        <img src="./leaderboard.png" alt="Leaderboard" height="90" width="90">
+    </a>
+    <a href="./" class="headers">
+        <img src="./home.png" alt="Home" height="90" width="90">
+    </a>
+    <a href="./create" class="headers create" id="create">
+        <img src="./create.png" alt="Create" height="90" width="90">
+    </a>
+    <div id="discord-div">
+        <a id="login"
+            href="https://discord.com/api/oauth2/authorize?client_id=758498275677437962&amp;redirect_uri=https%3A%2F%2Ftwowi.de%2F&amp;response_type=token&amp;scope=identify">
+            <div id="discord">
+                <img src="./discord.png" height="50" width="50" alt="Leaderboard" id="icon" class="headers">
+                <div id="info" class="headers">
+                    Connect
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <a href="./rush">
+        <div class="rushHeader">
+            <img src="./rush.png" alt="Rush" height="50" style="vertical-align: middle" width="50" />
+            Rush Mode
+        </div>
+    </a>
+</div>
+<div class="settings">
+    <h1 class="title">
+        Settings
+    </h1>
+    <label for="move_left">Move Left:</label>
+    <button type="button" name="move_left" class="controls"></button>
+    <br><br>
+    <label for="move_right">Move Right:</label>
+    <button type="button" name="move_right" class="controls"></button>
+    <br><br>
+    <label for="rotate_left">Rotate Left:</label>
+    <button type="button" name="rotate_left" class="controls"></button>
+    <br><br>
+    <label for="rotate_right">Rotate Right:</label>
+    <button type="button" name="rotate_right" class="controls"></button>
+    <br><br>
+    <label for="softdrop">Softdrop:</label>
+    <button type="button" name="softdrop" class="controls"></button>
+    <br><br>
+    <label for="harddrop">Harddrop:</label>
+    <button type="button" name="harddrop" class="controls"></button>
+    <br><br>
+    <label for="hold">Hold:</label>
+    <button type="button" name="hold" class="controls"></button>
+    <br><br>
+    <label for="restart">Reset Board:</label>
+    <button type="button" name="restart" class="controls"></button>
+    <br><br>
+    <label for="skip">(Rush) Skip:</label>
+    <button type="button" name="skip" class="controls">F5</button>
+    <br><br>
+    <label for="reset">(Rush) Restart:</label>
+    <button type="button" name="reset" class="controls">F6</button>
+    <br><br>
+    <label for="DAS">DAS(ms):</label>
+    <input id="DAS" name="DAS" type="number" value="10" style="width: 100px;font-size: 30px;float:right;">
+    <br><br>
+    <label for="ARR">ARR(ms):</label>
+    <input id="ARR" name="ARR" type="number" value="10" style="width: 100px;font-size: 30px;float:right;">
+    <br><br>
+    <label for="grav_ARR">Softdrop Speed(ms):</label>
+    <input id="grav_ARR" name="grav_ARR" type="number" value="10" style="width: 100px;font-size: 30px;float:right;">
+    <br><br><br>
+    <div class="test-board">
+        <canvas id="tetris" class="contrls" width="504" height="604"></canvas>
+    </div>
+    <button type="button" name="resetControls" class="options"
+        style="padding:10px;margin:20px;float:left; margin-left: 225px;">Reset</button>
+</div>
+<script src="./index.js"></script>
+<script src="./controls.js"></script>
+<script src="./tetris.js" difficulty="test" setup="controls" id="gameCode"></script>
+</body>
+
+</html>
