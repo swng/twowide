@@ -263,7 +263,8 @@ function updateLeaderboard(topUsers) {
 	});
 }
 
-url = 'https://twowi.de/rushLeaderboard';
+// url = 'https://twowi.de/rushLeaderboard';
+url = './rushLeaderboard.json'
 fetch(url)
 	.then((response) => response.json())
 	.then((json) => updateLeaderboard(json));
@@ -289,7 +290,9 @@ window.addEventListener('load', function () {
 	fragment = new URLSearchParams(fragment);
 	accessToken = fragment.get('access_token');
 	tokenType = fragment.get('token_type');
-	url = 'https://twowi.de/getRush';
+	// url = 'https://twowi.de/getRush';
+	// url = '/getRush1.json';
+	url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
 	var headers = new Headers();
 	headers.set('Authorization', accessToken + ':' + tokenType);
 	fetch(url, {
@@ -318,7 +321,9 @@ window.addEventListener('load', function () {
 					all[i].style.display = 'initial';
 				}
 				console.log('started');
-				url = 'https://twowi.de/getRush';
+				// url = 'https://twowi.de/getRush';
+				// url = '/getRush1.json';
+				url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
 				fetch(url, {
 					method: 'GET',
 					headers: headers,
@@ -341,7 +346,9 @@ window.addEventListener('load', function () {
 					intervalToggle = false;
 					clearInterval(interval);
 					clearInterval(timer);
-					url = 'https://twowi.de/getRush';
+					// url = 'https://twowi.de/getRush';
+					// url = '/getRush1.json';
+					url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
 					fetch(url, {
 						method: 'GET',
 						headers: headers,
@@ -502,7 +509,8 @@ window.addEventListener('load', function () {
 						document.getElementById('gameOverDiv').style.display = 'none';
 						document.getElementById('miniLeaderboard').innerHTML = '';
 						document.getElementById('checklist').innerHTML = '';
-						url = 'https://twowi.de/rushLeaderboard';
+						// url = 'https://twowi.de/rushLeaderboard';
+						url = "./rushLeaderboard.json";
 						fetch(url)
 							.then((response) => response.json())
 							.then((json) => updateLeaderboard(json));
