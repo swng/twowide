@@ -84,7 +84,8 @@ $(":button").click(function(event) {
         "hold": [67, "c"],
         "restart": [115 , "F4"],
         "DAS": 200,
-        "ARR": 10
+        "ARR": 10,
+        "grav_ARR": 0,
       }
 
       localStorage.setItem('controls', JSON.stringify(controls));
