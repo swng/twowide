@@ -37,6 +37,7 @@ function checkKey(e) {
 
 const das = document.getElementById('DAS');
 const arr = document.getElementById('ARR');
+const grav_ARR = document.getElementById('grav_ARR');
 das.addEventListener('change', (event) => {
   update()
 });
@@ -47,6 +48,7 @@ arr.addEventListener('change', (event) => {
 function update() {
   controls["DAS"] = das.value;
   controls["ARR"] = arr.value;
+  controls["grav_ARR"] = grav_ARR.value;
   console.log("autosaved");
   localStorage.setItem('controls', JSON.stringify(controls));
 }
