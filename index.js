@@ -5,12 +5,14 @@ if (localStorage.getItem('controls') === null) {
 		move_right: [39, 'ArrowRight'],
 		rotate_left: [83, 's'],
 		rotate_right: [38, 'ArrowUp'],
+		rotate_180: [65, 'a'],
 		softdrop: [40, 'ArrowDown'],
 		harddrop: [32, ' '],
 		hold: [67, 'c'],
 		restart: [115, 'F4'],
 		DAS: 200,
 		ARR: 10,
+		grav_ARR: 0
 	};
 	localStorage.setItem('controls', JSON.stringify(defaultControls));
 }

@@ -166,6 +166,7 @@ defaultControls = {
 	move_right: [39, 'ArrowRight'],
 	rotate_left: [88, 's'],
 	rotate_right: [38, 'ArrowUp'],
+	rotate_180: [65, 'a'],
 	softdrop: [40, 'ArrowDown'],
 	harddrop: [32, ' '],
 	hold: [67, 'c'],
@@ -174,6 +175,7 @@ defaultControls = {
 	reset: [117, 'F6'],
 	DAS: 200,
 	ARR: 10,
+	grav_ARR: 0
 };
 
 var controls = localStorage.getItem('controls');

@@ -73,12 +73,13 @@ $(":button").click(function(event) {
       console.log(controls);
       localStorage.setItem('controls', JSON.stringify(controls));
 
-    } else if (button.name == "reset") {
+    } else if (button.name == "resetControls") {
       controls = {
         "move_left": [37, "ArrowLeft"],
         "move_right": [39, "ArrowRight"],
         "rotate_left": [88, "s"],
         "rotate_right": [38, "ArrowUp"],
+        "rotate_180": [65, "a"],
         "softdrop": [40, "ArrowDown"],
         "harddrop": [32, " "],
         "hold": [67, "c"],
