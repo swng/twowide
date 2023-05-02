@@ -1,6 +1,5 @@
 var controls = localStorage.getItem("controls");
 controls = JSON.parse(controls);
-console.log(controls)
 var buttons = document.getElementsByTagName('button');
 for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
