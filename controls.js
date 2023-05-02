@@ -44,6 +44,9 @@ das.addEventListener('change', (event) => {
 arr.addEventListener('change', (event) => {
   update()
 });
+grav_ARR.addEventListener('change', (event) => {
+  update()
+});
 
 function update() {
   controls["DAS"] = das.value;
