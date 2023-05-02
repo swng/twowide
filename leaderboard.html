@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <title>T-Spin Leaderboard</title>
+  <link rel="stylesheet" href="./styling.css"/>
+  <link rel="icon" href="./2w.png"/>
+ </head>
+ <body>
+ 
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <div id="header">
+   <a href="settings" class="headers">
+    <img src="./settings.png" alt="Settings" height="90" width="90"/>
+   </a>
+   <a href="./" class="headers">
+    <img src="./home.png" alt="Home" height="90" width="90"/>
+   </a>
+   <a href="./create" class="headers create" id="create">
+    <img src="./create.png" alt="Create" height="90" width="90"/>
+   </a>
+   <div id="discord-div">
+    <a id="login" href="https://discord.com/api/oauth2/authorize?client_id=758498275677437962&amp;redirect_uri=https%3A%2F%2Ftwowi.de%2F&amp;response_type=token&amp;scope=identify">
+     <div id="discord">
+      <img src="./discord.png" height="50" width="50" alt="Leaderboard" id="icon" class="headers"/>
+      <div id="info" class="headers">Connect</div>
+     </div>
+    </a>
+   </div>
+   <a href="./rush">
+    <div class="rushHeader">
+     <img src="./rush.png" alt="Rush" height="50" style="vertical-align: middle" width="50"/>
+     Rush Mode
+    </div>
+   </a>
+  </div>
+  <br/><br/>
+  <h1 class="leaderboard title">Leaderboard</h1>
+  <br/><br/>
+  <div class="leaderboard div">
+   <ol class="leaderboard list" id="leaderboard"></ol>
+  </div>
+  <script src="./index.js"></script>
+  <script src="./leaderboard.js"></script>
+ </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>T-Spin Puzzles</title>
+<link rel="stylesheet" href="./styling.css">
+<link rel="icon" href="./2w.png">
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <div id="header">
+    <a href="settings" class="headers">
+      <img src="./settings.png" alt="Settings" height="90" width="90">
+    </a>
+    <a href="leaderboard" class="headers">
+      <img src="./leaderboard.png" alt="Leaderboard" height="90" width="90">
+    </a>
+    <a href="./" class="headers">
+      <img src="./home.png" alt="Home" height="90" width="90">
+    </a>
+    <a href="./create" class="headers create" id="create">
+      <img src="./create.png" alt="Create" height="90" width="90">
+    </a>
+    <div id="discord-div">
+      <a id="login"
+        href="https://discord.com/api/oauth2/authorize?client_id=758498275677437962&amp;redirect_uri=https%3A%2F%2Ftwowi.de%2F&amp;response_type=token&amp;scope=identify">
+        <div id="discord">
+          <img src="./discord.png" height="50" width="50" alt="Leaderboard"
+            id="icon" class="headers">
+          <div id="info" class="headers">
+            Connect
+          </div>
+        </div>
+      </a>
+    </div>
+    <a href="./rush">
+      <div class="rushHeader">
+        <img src="./rush.png" alt="Rush" height="50"
+          style="vertical-align: middle" width="50" />
+        Rush Mode
+      </div>
+    </a>
+
+  </div>
+  <br><br>
+  <div class="game info">
+    <canvas id="tetris" class="game board" width="504" height="604"></canvas>
+    <h1 class="game title" id="title">Title</h1>
+    <div class="game goals" id="checklist">
+    </div>
+    <button type="button" name="delete" class="delete" id="delete" onclick="deletePuzzle();">Delete</button>
+    <h1 class="preview completed" id="completed" style="display:none;">Completed</h1>
+  </div>
+  <h2 style="position:absolute; margin-left:590px; margin-top:620px;">Press <span id="restartKey">F4</span> to restart.
+  </h2>
+  <script src="./index.js"></script>
+  <script src="./tetris.js" difficulty="test" setup="controls"
+    id="gameCode"></script>
+  <script src="./game.js"></script>
+</body>
+
+</html>
