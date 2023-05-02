@@ -1469,6 +1469,11 @@ window.addEventListener('load', function () {
 					}
 				}
 
+				function rotate_180() { // way too lazy to implement this properly so just doing double cw for now
+					rotate_right();
+					rotate_right();
+				}
+
 				function harddrop() {
 					let dropY = y;
 					while (!collide([pieceMatrix, x, dropY + 1, piece])) {
