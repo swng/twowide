@@ -1293,7 +1293,7 @@ window.addEventListener('load', function () {
 
 				sendStr = `
         <div class="tracked correct" id="${board_id}">
-        <img src="https://twowi.de/checkmark.png" alt="" class="trackedIcon">${board_id + 1}
+        <img src="./checkmark.svg" alt="" class="trackedIcon">${board_id + 1}
         </div>`;
 				completedTracker.insertAdjacentHTML('beforeend', sendStr);
 				$(`#${board_id}`).fadeIn();
