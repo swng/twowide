@@ -205,7 +205,7 @@ window.addEventListener('load', function () {
 	accessToken = fragment.get('access_token');
 	tokenType = fragment.get('token_type');
 	// url = 'https://twowi.de/getRush';
-	url = './getRush1.json';
+	// url = './getRush1.json';
 	url = `https://swng.github.io/twowide_data/getRush.json`;
 	var headers = new Headers();
 	headers.set('Authorization', accessToken + ':' + tokenType);
@@ -290,6 +290,9 @@ window.addEventListener('load', function () {
 		if ('error' in data) {
 			alert(data['error']);
 		} else {
+			data.sort((a,b) => {
+				parseFloat(a.winrate) - parseFloat(b.winrate);
+			});
 			console.log(data);
 			lives = 3;
 			countdown = 30000;
