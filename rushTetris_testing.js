@@ -290,9 +290,7 @@ window.addEventListener('load', function () {
 		if ('error' in data) {
 			alert(data['error']);
 		} else {
-			data.sort((a,b) => {
-				parseFloat(a.winrate) - parseFloat(b.winrate);
-			});
+			data.sort((a,b) => parseFloat(a.winrate) - parseFloat(b.winrate));
 			console.log(data);
 			lives = 3;
 			countdown = 30000;
