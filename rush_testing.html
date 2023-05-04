@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rush Mode</title>
+		<link rel="stylesheet" href="styling.css" />
+		<link rel="icon" href="2w.png" />
+	</head>
+
+	<body>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<div id="header" style="text-align: center">
+			<a href="settings" class="headers">
+				<img src="settings.png" alt="Settings" height="90" width="90" />
+			</a>
+			<a href="/create" class="headers create" id="create">
+				<img src="create.png" alt="Create" height="90" width="90" />
+			</a>
+			<div id="discord-div">
+				<a
+					id="login"
+					href="https://discord.com/api/oauth2/authorize?client_id=758498275677437962&redirect_uri=https%3A%2F%2Ftwowi.de%2F&response_type=token&scope=identify"
+				>
+					<div id="discord">
+						<img src="discord.png" height="50" width="50" alt="Leaderboard" id="icon" class="headers" />
+						<div id="info" class="headers">Connect</div>
+					</div>
+				</a>
+			</div>
+			<a href="./">
+				<div class="rushHeader">
+					<img src="puzzle.png" alt="Puzzle" height="50" style="vertical-align: middle" width="50" />
+					Puzzle Mode
+				</div>
+			</a>
+		</div>
+		<h1 class="rushTitle">Rush Mode</h1>
+		<div class="rushContainer">
+			<div class="flex-grid">
+				<div class="col">
+					<div class="beforeStart" style="text-align: center">
+						<h2 style="width: 400px; margin: auto">
+							Complete puzzles of increasing difficulty over 5 minutes!
+						</h2>
+						<br />
+						<img src="  rush_example.png" alt="Example" />
+					</div>
+					<div class="afterStart">
+						<div class="completeContainer">
+							<h2 id="timer">50:00</h2>
+							<div class="completedTracker"></div>
+							<h2><span id="completedCounter">0</span> <span id="grammar">puzzles</span> completed.</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="beforeStart">
+						<button type="button" name="button" class="rushStart" id="startBtn">Start</button>
+					</div>
+					<div class="afterStart">
+						<canvas id="tetris" class="rushBoard" width="504" height="604"></canvas>
+						<h2>Press <span id="restart"></span> to restart, <span id="skip"></span> to skip,</h2>
+						<h2>and <span id="reset"></span> to reset board.</h2>
+					</div>
+					<br /><br /><br /><br />
+					<h3 id="error_login" class="error">Please login to discord to access Puzzle Rush</h3>
+					<h3 id="error_perm" class="error">
+						To play rush, become a supporter to play @
+						<a class="error_link" href="https://www.patreon.com/garbocan_"
+							>https://www.patreon.com/garbocan_</a
+						>
+						and join our discord at <a class="error_link" href="http://fourwi.de">http://fourwi.de</a>.
+					</h3>
+				</div>
+				<div class="col">
+					<div class="beforeStart">
+						<div id="miniLeaderboardDiv">
+							<ol id="miniLeaderboard"></ol>
+						</div>
+						<h3 id="error_sup" class="error">
+							Become a patreon supporter to show on the leaderboard @
+							<a class="error_link" href="https://www.patreon.com/garbocan_"
+								>https://www.patreon.com/garbocan_</a
+							>.
+						</h3>
+					</div>
+					<div class="afterStart">
+						<div class="goalsContainer">
+							<h1>Goals</h1>
+							<div class="rush goals" id="checklist"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="gameOverDiv">
+			<div id="gameOverContent">
+				<h2 class="gameOverText">Game Over</h2>
+				<img id="endingBoard" alt="Ending Board" width="252" height="302" />
+				<button type="button" name="button" class="endOptions" id="playAgain">Play Again</button>
+				<!-- <button type="button" name="button" class="endOptions">Leaderboard</button> -->
+				<!-- AddToAny BEGIN -->
+				<div
+					class="a2a_kit a2a_kit_size_32 a2a_default_style"
+					data-a2a-title="I was able to complete x puzzles in twowi.de's new Rush mode!"
+					id="shareButtons"
+				>
+					<a class="a2a_button_facebook"></a>
+					<a class="a2a_button_twitter"></a>
+					<a class="a2a_button_email"></a>
+					<a class="a2a_button_reddit"></a>
+					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+				</div>
+				<script async src="https://static.addtoany.com/menu/page.js"></script>
+				<!-- AddToAny END -->
+			</div>
+		</div>
+		<script src="index.js"></script>
+		<script src="rushTetris_testing.js"></script>
+	</body>
+</html>
