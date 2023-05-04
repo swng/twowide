@@ -206,7 +206,7 @@ window.addEventListener('load', function () {
 	tokenType = fragment.get('token_type');
 	// url = 'https://twowi.de/getRush';
 	url = './getRush1.json';
-	// url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
+	url = `https://swng.github.io/twowide_data/getRush.json`;
 	var headers = new Headers();
 	headers.set('Authorization', accessToken + ':' + tokenType);
 	fetch(url, {
@@ -236,8 +236,8 @@ window.addEventListener('load', function () {
 				}
 				console.log('started');
 				// url = 'https://twowi.de/getRush';
-				url = './getRush1.json';
-				// url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
+				// url = './getRush1.json';
+				url = `https://swng.github.io/twowide_data/getRush.json`;
 				fetch(url, {
 					method: 'GET',
 					headers: headers,
@@ -254,15 +254,15 @@ window.addEventListener('load', function () {
 			if (testKey == 'reset') {
 				if (key.which == controls['reset'][0] && countdown < 2950 && lives != 0) {
 					loadedNext = true;
-					countdown = 3000;
+					countdown = 0;
 					document.getElementById('checklist').innerHTML = '';
 					document.getElementsByClassName('completedTracker')[0].innerHTML = '';
 					intervalToggle = false;
 					clearInterval(interval);
 					clearInterval(timer);
 					// url = 'https://twowi.de/getRush';
-					url = './getRush1.json';
-					// url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
+					// url = './getRush1.json';
+					url = `https://swng.github.io/twowide_data/getRush.json`;
 					fetch(url, {
 						method: 'GET',
 						headers: headers,
