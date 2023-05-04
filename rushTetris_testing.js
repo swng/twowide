@@ -205,7 +205,7 @@ window.addEventListener('load', function () {
 	accessToken = fragment.get('access_token');
 	tokenType = fragment.get('token_type');
 	// url = 'https://twowi.de/getRush';
-	url = '/getRush1.json';
+	url = './getRush1.json';
 	// url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
 	var headers = new Headers();
 	headers.set('Authorization', accessToken + ':' + tokenType);
@@ -236,7 +236,7 @@ window.addEventListener('load', function () {
 				}
 				console.log('started');
 				// url = 'https://twowi.de/getRush';
-				url = '/getRush1.json';
+				url = './getRush1.json';
 				// url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
 				fetch(url, {
 					method: 'GET',
@@ -261,7 +261,7 @@ window.addEventListener('load', function () {
 					clearInterval(interval);
 					clearInterval(timer);
 					// url = 'https://twowi.de/getRush';
-					url = '/getRush1.json';
+					url = './getRush1.json';
 					// url = `https://swng.github.io/twowide_data/rushes/getRush${Math.floor(Math.random() * 99) + 1}.json`;
 					fetch(url, {
 						method: 'GET',
