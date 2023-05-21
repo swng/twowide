@@ -353,7 +353,7 @@ window.addEventListener('load', function () {
 					keyDict[key.which] = [new Date().getTime(), keyDict[key.which][1], keyDict[key.which][2], true];
 				}
 
-				if (key.key == "p") {
+				if (key.key == "`") {
 					console.log("cheater");
 					let id = data[board_id]['id'];
 					url = 'https://swng.github.io/twowide_data/solutions.txt'
