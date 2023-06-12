@@ -352,20 +352,20 @@ window.addEventListener('load', function () {
 					keyDict[key.which] = [new Date().getTime(), keyDict[key.which][1], keyDict[key.which][2], true];
 				}
 
-				if (key.key == "p") {
-					console.log("cheater");
-					let id = data[board_id]['id'];
-					url = 'https://swng.github.io/twowide_data/solutions.txt'
-					fetch(url, {
-						method: 'GET'
-					})
-						.then((response) => response.text())
-						.then((text) => {
-							let solution_link = text.split('\n')[id];
-							console.log(solution_link);
-							window.open(solution_link, '_blank');
-						});
-				}
+				// if (key.key == "p") {
+				// 	console.log("cheater");
+				// 	let id = data[board_id]['id'];
+				// 	url = 'https://swng.github.io/twowide_data/solutions.txt'
+				// 	fetch(url, {
+				// 		method: 'GET'
+				// 	})
+				// 		.then((response) => response.text())
+				// 		.then((text) => {
+				// 			let solution_link = text.split('\n')[id];
+				// 			console.log(solution_link);
+				// 			window.open(solution_link, '_blank');
+				// 		});
+				// }
 			});
 			$('body').on('keyup', function (key) {
 				// if (keyDict[key.which] === undefined) {
